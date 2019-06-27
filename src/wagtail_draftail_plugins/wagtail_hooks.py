@@ -1,6 +1,7 @@
 from wagtail.core import hooks
 from wagtail.admin.rich_text.converters.html_to_contentstate import BlockElementHandler
 from wagtail.admin.rich_text.converters.html_to_contentstate import InlineStyleElementHandler
+from django.utils.translation import gettext_lazy as _
 from collections import namedtuple
 import wagtail.admin.rich_text.editors.draftail.features as draftail_features
 
@@ -64,7 +65,7 @@ def register_h1_feature(features):
         control={
             'type': type_,
             'label': 'H1',
-            'description': 'Heading 1',
+            'description': _('Heading 1'),
             'element': tag,
         })
     _register_block_plugin(features, plugin)
@@ -83,7 +84,7 @@ def register_h5_feature(features):
         control={
             'type': type_,
             'label': 'H5',
-            'description': 'Heading 5',
+            'description': _('Heading 5'),
             'element': tag,
         })
     _register_block_plugin(features, plugin)
@@ -102,7 +103,7 @@ def register_paragraph_feature(features):
         control={
             'type': type_,
             'label': '¶',
-            'description': 'Paragraph',
+            'description': _('Paragraph'),
             'element': tag,
         })
     _register_block_plugin(features, plugin)
@@ -117,7 +118,7 @@ def register_superscript_feature(features):
     control = {
         'type': type_,
         'label': 'x⁹',
-        'description': 'Superscript',
+        'description': _('Superscript'),
         'style': {
             'fontSize': '0.8em',
             'verticalAlign': 'super',
@@ -145,7 +146,7 @@ def register_subscript_feature(features):
     control = {
         'type': type_,
         'label': 'x₉',
-        'description': 'Subscript',
+        'description': _('Subscript'),
         'style': {
             'fontSize': '0.8em',
             'verticalAlign': 'sub',
