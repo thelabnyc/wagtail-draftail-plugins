@@ -25,3 +25,10 @@ test_python37:
   script:
     - pip install tox
     - tox --skip-missing-interpreters
+
+test_python38:
+  stage: test
+  image: python:3.8
+  script:
+    - pip install tox
+    - tox --skip-missing-interpreters
