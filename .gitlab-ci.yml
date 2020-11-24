@@ -1,23 +1,15 @@
 stages:
   - test
 
-test_python36:
+test:
   stage: test
-  image: python:3.6
+  image: $IMAGE
   script:
     - pip install tox
     - tox --skip-missing-interpreters
-
-test_python37:
-  stage: test
-  image: python:3.7
-  script:
-    - pip install tox
-    - tox --skip-missing-interpreters
-
-test_python38:
-  stage: test
-  image: python:3.8
-  script:
-    - pip install tox
-    - tox --skip-missing-interpreters
+  parallel:
+    matrix:
+      - IMAGE:
+          - python:3.7
+          - python:3.8
+          - python:3.9
