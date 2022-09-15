@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-26 20:44+0000\n"
+"POT-Creation-Date: 2022-09-15 19:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,22 +18,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: wagtail_draftail_plugins/wagtail_hooks.py:68
+#: wagtail_draftail_plugins/wagtail_hooks.py:75
 msgid "Heading 1"
 msgstr ""
 
-#: wagtail_draftail_plugins/wagtail_hooks.py:87
+#: wagtail_draftail_plugins/wagtail_hooks.py:94
 msgid "Heading 5"
 msgstr ""
 
-#: wagtail_draftail_plugins/wagtail_hooks.py:106
+#: wagtail_draftail_plugins/wagtail_hooks.py:113
 msgid "Paragraph"
 msgstr ""
 
-#: wagtail_draftail_plugins/wagtail_hooks.py:121
+#: wagtail_draftail_plugins/wagtail_hooks.py:128
 msgid "Superscript"
 msgstr ""
 
-#: wagtail_draftail_plugins/wagtail_hooks.py:149
+#: wagtail_draftail_plugins/wagtail_hooks.py:161
 msgid "Subscript"
 msgstr ""
