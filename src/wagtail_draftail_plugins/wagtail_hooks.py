@@ -1,10 +1,10 @@
-from wagtail.core import hooks
+from collections import namedtuple
+from django.utils.translation import gettext as _
+from wagtail import hooks
 from wagtail.admin.rich_text.converters.html_to_contentstate import BlockElementHandler
 from wagtail.admin.rich_text.converters.html_to_contentstate import (
     InlineStyleElementHandler,
 )
-from django.utils.translation import gettext as _
-from collections import namedtuple
 import wagtail.admin.rich_text.editors.draftail.features as draftail_features
 
 
