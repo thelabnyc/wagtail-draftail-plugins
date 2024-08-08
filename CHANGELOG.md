@@ -1,5 +1,12 @@
 # Changes
 
+## v0.3.1b0 (2024-08-08)
+
+### Fix
+
+- **deps**: update dependency wagtail to >=6.1.2
+- **deps**: update dependency wagtail to v5.2.5
+
 ## v0.3.0 (2023-06-14)
 
 ## v0.2.2 (2019-12-18)
