@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "wagtail-draftail-plugins"
-version = "0.3.0.post2"
+version = "0.3.0"
 description = "Commonly used extensions to Wagtail's Draftail editor."
 authors = ["thelab <thelabdev@thelab.co>"]
 readme = "README.rst"
@@ -28,7 +28,6 @@ tox = ">=4.16.0"
 name = "cz_conventional_commits"
 annotated_tag = true
 gpg_sign = true
-major_version_zero = true
 tag_format = "v$version"
 update_changelog_on_bump = true
 changelog_merge_prerelease = true
