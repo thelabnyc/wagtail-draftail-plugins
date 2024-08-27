@@ -396,13 +396,13 @@ pyflakes = ">=3.2.0,<3.3.0"
 
 [[package]]
 name = "idna"
-version = "3.7"
+version = "3.8"
 description = "Internationalized Domain Names in Applications (IDNA)"
 optional = false
-python-versions = ">=3.5"
+python-versions = ">=3.6"
 files = [
-    {file = "idna-3.7-py3-none-any.whl", hash = "sha256:82fee1fc78add43492d3a1898bfa6d8a904cc97d8427f683ed8e798d07761aa0"},
-    {file = "idna-3.7.tar.gz", hash = "sha256:028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"},
+    {file = "idna-3.8-py3-none-any.whl", hash = "sha256:050b4e5baadcd44d760cedbd2b8e639f2ff89bbc7a5730fcc662954303377aac"},
+    {file = "idna-3.8.tar.gz", hash = "sha256:d838c2c0ed6fced7693d5e8ab8e734d5f8fda53a039c0164afb0b82e771e3603"},
 ]
 
 [[package]]
@@ -895,13 +895,13 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 
 [[package]]
 name = "wagtail"
-version = "6.2"
+version = "6.2.1"
 description = "A Django content management system."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "wagtail-6.2-py3-none-any.whl", hash = "sha256:9898b3f3a25fbf4cbcea34a8884b4aed7bc957b3877a3e1bd994e072452f5fae"},
-    {file = "wagtail-6.2.tar.gz", hash = "sha256:59086e8ca181b10f274b113924500504ded6fc16824c1976f37c3cbddd100d24"},
+    {file = "wagtail-6.2.1-py3-none-any.whl", hash = "sha256:31d073ea8acdc973ef45c5719977a1bb122ad0fc3f01348f37e922128200b42a"},
+    {file = "wagtail-6.2.1.tar.gz", hash = "sha256:0f136ef23b157997a44fa46543a320a31437350951cf13add8ea8b69cc5e8385"},
 ]
 
 [package.dependencies]
