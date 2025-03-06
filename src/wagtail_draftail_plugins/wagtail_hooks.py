@@ -1,25 +1,26 @@
-from collections import namedtuple
+from typing import Any, NamedTuple, TypeAlias
+
 from django.utils.translation import gettext as _
 from wagtail import hooks
 from wagtail.admin.rich_text.converters.html_to_contentstate import BlockElementHandler
 from wagtail.admin.rich_text.converters.html_to_contentstate import (
     InlineStyleElementHandler,
 )
+from wagtail.rich_text.feature_registry import FeatureRegistry
 import wagtail.admin.rich_text.editors.draftail.features as draftail_features
 
 
-EditorPlugin = namedtuple(
-    "BlockPlugin",
-    (
-        "feature_name",
-        "type",
-        "tag",
-        "control",
-    ),
-)
+ControlDict: TypeAlias = dict[str, Any]
 
 
-def _register_block_plugin(features, plugin):
+class EditorPlugin(NamedTuple):
+    feature_name: str
+    type: str
+    tag: str
+    control: ControlDict
+
+
+def _register_block_plugin(features: FeatureRegistry, plugin: EditorPlugin) -> None:
     features.register_editor_plugin(
         "draftail", plugin.feature_name, draftail_features.BlockFeature(plugin.control)
     )
@@ -39,7 +40,9 @@ def _register_block_plugin(features, plugin):
     )
 
 
-def _insert_feature_before(features, insert_feature, anchor_feature):
+def _insert_feature_before(
+    features: FeatureRegistry, insert_feature: str, anchor_feature: str
+) -> None:
     try:
         index = features.default_features.index(anchor_feature)
     except ValueError:
@@ -50,7 +53,9 @@ def _insert_feature_before(features, insert_feature, anchor_feature):
         features.default_features.append(insert_feature)
 
 
-def _insert_feature_after(features, insert_feature, anchor_feature):
+def _insert_feature_after(
+    features: FeatureRegistry, insert_feature: str, anchor_feature: str
+) -> None:
     try:
         index = features.default_features.index(anchor_feature)
     except ValueError:
@@ -61,8 +66,8 @@ def _insert_feature_after(features, insert_feature, anchor_feature):
         features.default_features.append(insert_feature)
 
 
-@hooks.register("register_rich_text_features")
-def register_h1_feature(features):
+@hooks.register("register_rich_text_features")  # type: ignore[misc]
+def register_h1_feature(features: FeatureRegistry) -> None:
     type_ = "h1"
     tag = "h1"
     plugin = EditorPlugin(
@@ -80,8 +85,8 @@ def register_h1_feature(features):
     _insert_feature_before(features, type_, "h2")  # Insert h1 before h2
 
 
-@hooks.register("register_rich_text_features")
-def register_h5_feature(features):
+@hooks.register("register_rich_text_features")  # type: ignore[misc]
+def register_h5_feature(features: FeatureRegistry) -> None:
     type_ = "h5"
     tag = "h5"
     plugin = EditorPlugin(
@@ -99,8 +104,8 @@ def register_h5_feature(features):
     _insert_feature_after(features, type_, "h4")  # Insert h5 after h4
 
 
-@hooks.register("register_rich_text_features")
-def register_paragraph_feature(features):
+@hooks.register("register_rich_text_features")  # type: ignore[misc]
+def register_paragraph_feature(features: FeatureRegistry) -> None:
     type_ = "paragraph"
     tag = "p"
     plugin = EditorPlugin(
@@ -118,11 +123,11 @@ def register_paragraph_feature(features):
     _insert_feature_before(features, type_, "h1")  # Insert paragraph before h1
 
 
-@hooks.register("register_rich_text_features")
-def register_superscript_feature(features):
+@hooks.register("register_rich_text_features")  # type: ignore[misc]
+def register_superscript_feature(features: FeatureRegistry) -> None:
     type_ = "superscript"
     tag = "sup"
-    control = {
+    control: ControlDict = {
         "type": type_,
         "label": "x⁹",
         "description": _("Superscript"),
@@ -151,11 +156,11 @@ def register_superscript_feature(features):
     _insert_feature_after(features, type_, "italic")  # Insert superscript after italic
 
 
-@hooks.register("register_rich_text_features")
-def register_subscript_feature(features):
+@hooks.register("register_rich_text_features")  # type: ignore[misc]
+def register_subscript_feature(features: FeatureRegistry) -> None:
     type_ = "subscript"
     tag = "sub"
-    control = {
+    control: ControlDict = {
         "type": type_,
         "label": "x₉",
         "description": _("Subscript"),
