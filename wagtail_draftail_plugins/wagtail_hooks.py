@@ -2,13 +2,12 @@ from typing import Any, NamedTuple, TypeAlias
 
 from django.utils.translation import gettext as _
 from wagtail import hooks
-from wagtail.admin.rich_text.converters.html_to_contentstate import BlockElementHandler
 from wagtail.admin.rich_text.converters.html_to_contentstate import (
+    BlockElementHandler,
     InlineStyleElementHandler,
 )
 from wagtail.rich_text.feature_registry import FeatureRegistry
 import wagtail.admin.rich_text.editors.draftail.features as draftail_features
-
 
 ControlDict: TypeAlias = dict[str, Any]
 
@@ -21,9 +20,7 @@ class EditorPlugin(NamedTuple):
 
 
 def _register_block_plugin(features: FeatureRegistry, plugin: EditorPlugin) -> None:
-    features.register_editor_plugin(
-        "draftail", plugin.feature_name, draftail_features.BlockFeature(plugin.control)
-    )
+    features.register_editor_plugin("draftail", plugin.feature_name, draftail_features.BlockFeature(plugin.control))
     features.register_converter_rule(
         "contentstate",
         plugin.feature_name,
@@ -40,9 +37,7 @@ def _register_block_plugin(features: FeatureRegistry, plugin: EditorPlugin) -> N
     )
 
 
-def _insert_feature_before(
-    features: FeatureRegistry, insert_feature: str, anchor_feature: str
-) -> None:
+def _insert_feature_before(features: FeatureRegistry, insert_feature: str, anchor_feature: str) -> None:
     try:
         index = features.default_features.index(anchor_feature)
     except ValueError:
@@ -53,9 +48,7 @@ def _insert_feature_before(
         features.default_features.append(insert_feature)
 
 
-def _insert_feature_after(
-    features: FeatureRegistry, insert_feature: str, anchor_feature: str
-) -> None:
+def _insert_feature_after(features: FeatureRegistry, insert_feature: str, anchor_feature: str) -> None:
     try:
         index = features.default_features.index(anchor_feature)
     except ValueError:
@@ -136,9 +129,7 @@ def register_superscript_feature(features: FeatureRegistry) -> None:
             "verticalAlign": "super",
         },
     }
-    features.register_editor_plugin(
-        "draftail", type_, draftail_features.InlineStyleFeature(control)
-    )
+    features.register_editor_plugin("draftail", type_, draftail_features.InlineStyleFeature(control))
     features.register_converter_rule(
         "contentstate",
         type_,
@@ -169,9 +160,7 @@ def register_subscript_feature(features: FeatureRegistry) -> None:
             "verticalAlign": "sub",
         },
     }
-    features.register_editor_plugin(
-        "draftail", type_, draftail_features.InlineStyleFeature(control)
-    )
+    features.register_editor_plugin("draftail", type_, draftail_features.InlineStyleFeature(control))
     features.register_converter_rule(
         "contentstate",
         type_,
@@ -186,6 +175,4 @@ def register_subscript_feature(features: FeatureRegistry) -> None:
             },
         },
     )
-    _insert_feature_after(
-        features, type_, "superscript"
-    )  # Insert superscript after italic
+    _insert_feature_after(features, type_, "superscript")  # Insert superscript after italic

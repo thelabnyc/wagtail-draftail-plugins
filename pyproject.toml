@@ -23,7 +23,7 @@ Repository = "https://gitlab.com/thelabnyc/wagtail-draftail-plugins"
 
 [dependency-groups]
 dev = [
-    "flake8 (>=7.2.0)",
+    "ruff (>=0.11.6)",
     "tox>=4.25.0",
     "mypy (>=1.15.0,<2)",
     "django-stubs (>=5.1.3,<6)",
@@ -42,18 +42,24 @@ update_changelog_on_bump = true
 changelog_merge_prerelease = true
 version_provider = "pep621"
 version_scheme = "pep440"
-version_files = [
-    "pyproject.toml:version",
-]
-pre_bump_hooks = [
-    "pre-commit run --all-files || true",
-]
-post_bump_hooks = [
-    "git push origin master $CZ_POST_CURRENT_TAG_VERSION"
-]
+version_files = ["pyproject.toml:version"]
+pre_bump_hooks = ["pre-commit run --all-files || true"]
+post_bump_hooks = ["git push origin master $CZ_POST_CURRENT_TAG_VERSION"]
+
+[tool.isort]
+profile = "black"
+from_first = true
+
+[tool.ruff.lint.isort]
+from-first = true
+
+[tool.ruff]
+line-length = 160
+
+[tool.ruff.lint]
 
 [tool.mypy]
-python_version = "3.10"
+python_version = "3.11"
 
 # Strict mode, see mypy --help
 warn_unused_configs = true
