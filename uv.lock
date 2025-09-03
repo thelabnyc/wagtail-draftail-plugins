@@ -788,7 +788,7 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "wagtail", specifier = ">=6.3" }]
+requires-dist = [{ name = "wagtail", specifier = ">=7.0" }]
 
 [package.metadata.requires-dev]
 dev = [
