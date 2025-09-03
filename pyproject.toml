@@ -23,7 +23,7 @@ Repository = "https://gitlab.com/thelabnyc/wagtail-draftail-plugins"
 
 [dependency-groups]
 dev = [
-    "ruff (>=0.11.6)",
+    "ruff (>=0.12.11)",
     "tox>=4.25.0",
     "mypy (>=1.15.0,<2)",
     "django-stubs (>=5.1.3,<6)",
