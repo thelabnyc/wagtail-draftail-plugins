@@ -796,7 +796,7 @@ dev = [
     { name = "mypy", specifier = ">=1.17.1,<2" },
     { name = "ruff", specifier = ">=0.12.11" },
     { name = "tox", specifier = ">=4.25.0" },
-    { name = "tox-uv", specifier = ">=1.26.1" },
+    { name = "tox-uv", specifier = ">=1.28.0" },
 ]
 
 [[package]]

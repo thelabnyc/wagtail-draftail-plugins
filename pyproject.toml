@@ -27,7 +27,7 @@ dev = [
     "tox>=4.25.0",
     "mypy (>=1.17.1,<2)",
     "django-stubs (>=5.2.2,<6)",
-    "tox-uv>=1.26.1",
+    "tox-uv>=1.28.0",
 ]
 
 [tool.hatch.build.targets.wheel]
