@@ -59,7 +59,7 @@ def _insert_feature_after(features: FeatureRegistry, insert_feature: str, anchor
         features.default_features.append(insert_feature)
 
 
-@hooks.register("register_rich_text_features")  # type: ignore[misc]
+@hooks.register("register_rich_text_features")  # type: ignore[untyped-decorator]
 def register_h1_feature(features: FeatureRegistry) -> None:
     type_ = "h1"
     tag = "h1"
@@ -78,7 +78,7 @@ def register_h1_feature(features: FeatureRegistry) -> None:
     _insert_feature_before(features, type_, "h2")  # Insert h1 before h2
 
 
-@hooks.register("register_rich_text_features")  # type: ignore[misc]
+@hooks.register("register_rich_text_features")  # type: ignore[untyped-decorator]
 def register_h5_feature(features: FeatureRegistry) -> None:
     type_ = "h5"
     tag = "h5"
@@ -97,7 +97,7 @@ def register_h5_feature(features: FeatureRegistry) -> None:
     _insert_feature_after(features, type_, "h4")  # Insert h5 after h4
 
 
-@hooks.register("register_rich_text_features")  # type: ignore[misc]
+@hooks.register("register_rich_text_features")  # type: ignore[untyped-decorator]
 def register_paragraph_feature(features: FeatureRegistry) -> None:
     type_ = "paragraph"
     tag = "p"
@@ -116,7 +116,7 @@ def register_paragraph_feature(features: FeatureRegistry) -> None:
     _insert_feature_before(features, type_, "h1")  # Insert paragraph before h1
 
 
-@hooks.register("register_rich_text_features")  # type: ignore[misc]
+@hooks.register("register_rich_text_features")  # type: ignore[untyped-decorator]
 def register_superscript_feature(features: FeatureRegistry) -> None:
     type_ = "superscript"
     tag = "sup"
@@ -147,7 +147,7 @@ def register_superscript_feature(features: FeatureRegistry) -> None:
     _insert_feature_after(features, type_, "italic")  # Insert superscript after italic
 
 
-@hooks.register("register_rich_text_features")  # type: ignore[misc]
+@hooks.register("register_rich_text_features")  # type: ignore[untyped-decorator]
 def register_subscript_feature(features: FeatureRegistry) -> None:
     type_ = "subscript"
     tag = "sub"
