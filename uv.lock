@@ -936,7 +936,7 @@ requires-dist = [{ name = "wagtail", specifier = ">=7.0" }]
 dev = [
     { name = "django-stubs", specifier = ">=5.2.9,<6" },
     { name = "mypy", specifier = ">=1.19.1,<2" },
-    { name = "ruff", specifier = ">=0.15.3" },
+    { name = "ruff", specifier = ">=0.15.4" },
     { name = "tox", specifier = ">=4.46.0" },
     { name = "tox-uv", specifier = ">=1.32.1" },
 ]
