@@ -24,10 +24,10 @@ Repository = "https://gitlab.com/thelabnyc/wagtail-draftail-plugins"
 [dependency-groups]
 dev = [
     "ruff (>=0.15.4)",
-    "tox>=4.46.0",
+    "tox>=4.46.3",
     "mypy (>=1.19.1,<2)",
     "django-stubs (>=5.2.9,<6)",
-    "tox-uv>=1.32.1",
+    "tox-uv>=1.33.0",
 ]
 
 [tool.hatch.build.targets.wheel]
