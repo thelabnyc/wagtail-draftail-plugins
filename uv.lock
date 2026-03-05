@@ -959,7 +959,7 @@ dev = [
     { name = "mypy", specifier = ">=1.19.1,<2" },
     { name = "ruff", specifier = ">=0.15.4" },
     { name = "tox", specifier = ">=4.47.0" },
-    { name = "tox-uv", specifier = ">=1.33.0" },
+    { name = "tox-uv", specifier = ">=1.33.1" },
 ]
 
 [[package]]
