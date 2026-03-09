@@ -968,7 +968,7 @@ dev = [
     { name = "django-stubs", specifier = ">=5.2.9,<6" },
     { name = "mypy", specifier = ">=1.19.1,<2" },
     { name = "ruff", specifier = ">=0.15.5" },
-    { name = "tox", specifier = ">=4.48.1" },
+    { name = "tox", specifier = ">=4.49.0" },
     { name = "tox-uv", specifier = ">=1.33.1" },
 ]
 
