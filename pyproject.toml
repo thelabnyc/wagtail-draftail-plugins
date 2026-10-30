@@ -7,7 +7,7 @@ name = "wagtail-draftail-plugins"
 version = "0.4.0"
 description = "Commonly used extensions to Wagtail's Draftail editor."
 readme = "README.rst"
-dependencies = ["wagtail (>=7.0)"]
+dependencies = ["wagtail (>=7.4)"]
 requires-python = ">=3.12"
 
 [project.license]
