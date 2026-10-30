@@ -1,4 +1,4 @@
-from typing import Any, NamedTuple, TypeAlias
+from typing import Any, NamedTuple
 
 from django.utils.translation import gettext as _
 from wagtail import hooks
@@ -9,7 +9,7 @@ from wagtail.admin.rich_text.converters.html_to_contentstate import (
 from wagtail.rich_text.feature_registry import FeatureRegistry
 import wagtail.admin.rich_text.editors.draftail.features as draftail_features
 
-ControlDict: TypeAlias = dict[str, Any]
+type ControlDict = dict[str, Any]
 
 
 class EditorPlugin(NamedTuple):
