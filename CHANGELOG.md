@@ -1,5 +1,25 @@
 # Changes
 
+## v0.5.0 (2026-10-30)
+
+### Feat
+
+- support Wagtail 8.0 and Django 5.2/6.0/6.1, drop Wagtail 7.0
+- support Python 3.15 and drop Python 3.11
+- add wagtail 7.4 LTS to test matrix
+- support Python 3.14
+
+### Fix
+
+- **deps**: update dependency wagtail to >=7.0
+- prevent renovate from pointing all URLs at gitlab
+
+### Refactor
+
+- adopt Python 3.12 syntax
+- migrate black/flake8 -> ruff
+- migrate from poetry -> uv
+
 ## v0.4.0 (2025-04-03)
 
 ### Feat

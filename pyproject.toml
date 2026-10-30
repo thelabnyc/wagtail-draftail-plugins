@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "wagtail-draftail-plugins"
-version = "0.4.0"
+version = "0.5.0"
 description = "Commonly used extensions to Wagtail's Draftail editor."
 readme = "README.rst"
 dependencies = ["wagtail (>=7.4)"]
